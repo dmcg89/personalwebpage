@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.ad,a {
+    grid-area: ad;
+    color: white;
+    line-height: 1.6;
+}
+
+.picture {
+    overflow: hidden;
+    transform: rotate(60deg);
+    width: 400px;
+    /* width: 400; */
+    border-radius:20%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.wrapper {
+    color: white;
+    background-image: radial-gradient(circle, rgb(34, 200, 227), rgb(34, 145, 227), rgb(2, 63, 108));
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    /* grid-gap: 10px; */
+    grid-template-columns: repeat(3, 1fr);
+    font-family: roboto;
+    grid-template-areas:
+        /* "header  header" */
+        "nav     nav    nav "
+        "sidebar content  . "
+        ".      .         . "
+        "footer    ad  ad ";
+}
